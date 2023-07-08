@@ -2,7 +2,7 @@ import CasinoIcon from "@mui/icons-material/Casino";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useState } from "react";
 import pet1 from "../images/pets/1.png";
-import { Fab } from "@mui/material";
+import { Fab, TextField } from "@mui/material";
 import "../styles/creation.css";
 
 const Creation = () => {
@@ -27,8 +27,10 @@ const Creation = () => {
   };
 
   return (
-    <div>
-      <h1>CHOOSE YOUR PET:</h1>
+    <div className="creation">
+      <h1>SELECT YOUR PET</h1>
+      <TextField id="pet-name" label="Name your pet" variant="outlined" />
+      <img alt="Pet avatar" className="avatar" src={petAvatar} />
       <Fab
         color="primary"
         id="random-btn"
@@ -38,7 +40,6 @@ const Creation = () => {
         <CasinoIcon />
         Randomise
       </Fab>
-      <img src={petAvatar} alt="Pet avatar" />
       <Fab color="primary" id="select-btn" variant="extended">
         Select
         <ArrowForwardIosIcon />

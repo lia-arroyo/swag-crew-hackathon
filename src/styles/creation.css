@@ -1,3 +1,13 @@
+.creation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 30%;
+}
+
 #random-btn {
   position: absolute;
   bottom: 10%;
