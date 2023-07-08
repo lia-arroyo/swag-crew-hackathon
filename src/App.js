@@ -14,9 +14,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Creation />} />
           <Route path="/map" element={<Map />} />
-          <Route path="/map" element={<Closeup />} />
-          <Route path="/map" element={<DressingRoom />} />
-          <Route path="/map" element={<Landmark />} />
+          <Route path="/closeup" element={<Closeup />} />
+          <Route path="/dressing-room" element={<DressingRoom />} />
+          <Route path="/landmark" element={<Landmark />} />
         </Routes>
       </div>
     </div>
