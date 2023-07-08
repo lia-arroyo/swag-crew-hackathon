@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 
 function FindDistance() {
@@ -36,6 +36,10 @@ function FindDistance() {
       .then((res) => res.json())
       .then((data) => ({ distance: data.routes[0].distance }));
   };
+
+  useEffect(() => {
+    console.log(dist);
+  }, [dist]);
 
   const handleSearch = async () => {
     const { lat: startLat, long: startLong } = await getLatAndLon(startLoc);
