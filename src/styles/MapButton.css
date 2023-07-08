@@ -1,0 +1,8 @@
+#checkpointButton {
+    transform: scale(1.8);
+    color: #000000;
+}
+
+#checkpointButton:hover {
+    color: grey;
+}
