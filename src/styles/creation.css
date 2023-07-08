@@ -1,0 +1,11 @@
+#random-btn {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+#select-btn {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
