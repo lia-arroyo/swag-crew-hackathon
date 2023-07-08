@@ -1,5 +1,6 @@
 * {
-  overflow: hidden;
+  border: 0;
+  margin: 0;
 }
 
 .button-container {
@@ -11,4 +12,54 @@
 .vert-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-bar {
+  height: 18vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: paleturquoise;
+  border-radius: 50px;
+  margin: 2vh;
+  padding: 1vh;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 0.5vw;
+}
+
+.name-container h3 {
+  font-size: 4vh;
+}
+
+.status-bar p {
+  font-size: 2.5vh;
+}
+
+.right p {
+  margin: 0 1vh;
+}
+.name-container p {
+  font-size: 2vh;
+  font-style: italic;
+}
+
+.pet-icon {
+  height: 100px;
+  padding: 1.5vh;
+  margin: 0 1.5vh;
+  border-radius: 55px;
 }

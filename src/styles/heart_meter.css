@@ -14,3 +14,9 @@
   width: 100px;
   position: relative;
 }
+
+p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1vh;
+}
