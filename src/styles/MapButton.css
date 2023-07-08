@@ -3,6 +3,17 @@
     color: #000000;
 }
 
-#checkpointButton:hover {
-    color: grey;
+.people-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slide-container h1 {
+    padding: 0 25px 0 25px;
+}
+
+.slide-container section {
+    text-align: justify;
+    padding: 0 25px 25px 25px;
 }
