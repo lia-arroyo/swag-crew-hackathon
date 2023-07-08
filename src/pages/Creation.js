@@ -1,7 +1,7 @@
 import CasinoIcon from "@mui/icons-material/Casino";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useState } from "react";
-import pet1 from "../images/pets/1.png";
+import pet1 from "../images/pets/1/avatar1.png";
 import { Fab, TextField } from "@mui/material";
 import "../styles/creation.css";
 
@@ -21,7 +21,7 @@ const Creation = () => {
     }
 
     setPet(newPet);
-    import(`../images/pets/${newPet}.png`).then((image) =>
+    import(`../images/pets/${newPet}/avatar1.png`).then((image) =>
       setPetAvatar(image.default)
     );
   };
