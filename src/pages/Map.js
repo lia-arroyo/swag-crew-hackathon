@@ -12,14 +12,14 @@ const Map = () => {
     const slides1 =[
         {
             heading: "Fountain",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ullamcorper mauris. Etiam tincidunt porttitor est, vitae mattis justo mollis sit amet. Morbi maximus laoreet ornare. Aliquam consectetur ultrices dictum. Cras ornare mattis purus, ut luctus mi suscipit ac."
+            content: "A bountiful fountain, surprisingly still runs water?? Legend says if you drink from the fountain you will have a really bad tummy ache..."
         },
         {
             heading: "People",
             content: <ul className="people-list">
-                        <li>Person 1</li>
-                        <li>Person 2</li>
-                        <li>Person 3</li>
+                        <li>Eugene</li>
+                        <li>Atharva</li>
+                        <li>Billy Bob James</li>
                     </ul>
         }
     ];
@@ -27,14 +27,13 @@ const Map = () => {
     const slides2 =[
         {
             heading: "Frozen Wilds",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ullamcorper mauris. Etiam tincidunt porttitor est, vitae mattis justo mollis sit amet. Morbi maximus laoreet ornare. Aliquam consectetur ultrices dictum. Cras ornare mattis purus, ut luctus mi suscipit ac."
+            content: "Apparently the wilds are frozen here... or so I've heard. Make sure to bring a top hat!"
         },
         {
             heading: "People",
             content: <ul className="people-list">
-                        <li>Person 1</li>
-                        <li>Person 2</li>
-                        <li>Person 3</li>
+                        <li>Leeyurr</li>
+                        <li>Sagar Indian Restaurnant</li>
                     </ul>
         }
     ];
@@ -42,14 +41,12 @@ const Map = () => {
     const slides3 =[
         {
             heading: "Mountains",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ullamcorper mauris. Etiam tincidunt porttitor est, vitae mattis justo mollis sit amet. Morbi maximus laoreet ornare. Aliquam consectetur ultrices dictum. Cras ornare mattis purus, ut luctus mi suscipit ac."
+            content: "Dont go in the lake..."
         },
         {
             heading: "People",
             content: <ul className="people-list">
-                        <li>Person 1</li>
-                        <li>Person 2</li>
-                        <li>Person 3</li>
+                        <li>Mao</li>
                     </ul>
         }
     ];
@@ -57,29 +54,26 @@ const Map = () => {
     const slides4 =[
         {
             heading: "Desert",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ullamcorper mauris. Etiam tincidunt porttitor est, vitae mattis justo mollis sit amet. Morbi maximus laoreet ornare. Aliquam consectetur ultrices dictum. Cras ornare mattis purus, ut luctus mi suscipit ac."
+            content: "Where did all this sand come from????? What????? Nooooo"
         },
         {
             heading: "People",
             content: <ul className="people-list">
-                        <li>Person 1</li>
-                        <li>Person 2</li>
-                        <li>Person 3</li>
+                        <li>Grimace</li>
+                        <li>Freddy</li>
                     </ul>
         }
     ];
 
     const slides5 =[
         {
-            heading: "Burning Shores",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ullamcorper mauris. Etiam tincidunt porttitor est, vitae mattis justo mollis sit amet. Morbi maximus laoreet ornare. Aliquam consectetur ultrices dictum. Cras ornare mattis purus, ut luctus mi suscipit ac."
+            heading: "???",
+            content: "The Final Boss. Reach all the previous landmarks first to unlock this area."
         },
         {
             heading: "People",
             content: <ul className="people-list">
-                        <li>Person 1</li>
-                        <li>Person 2</li>
-                        <li>Person 3</li>
+                        <li>Mysterious Cat</li>
                     </ul>
         }
     ];
