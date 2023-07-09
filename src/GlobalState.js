@@ -4,7 +4,7 @@ export const GlobalStateContext = createContext();
 
 export const GlobalStateProvider = ({ children }) => {
   const [distTravelled, setDistTravelled] = useState(0);
-  const [petChosen, setPetChosen] = useState(null);
+  const [petChosen, setPetChosen] = useState(1);
   const [playerName, setPlayerName] = useState("");
   const [petName, setPetName] = useState("");
   return (
