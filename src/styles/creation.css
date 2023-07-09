@@ -32,6 +32,9 @@
   display: flex;
   width: 40%;
   justify-content: center;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 .normalAvatar {
@@ -41,6 +44,9 @@
 .avatar:hover .hoverAvatar {
   display: inline-block;
   width: 100%;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 .avatar:hover .normalAvatar {
   display: none;
