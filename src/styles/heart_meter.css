@@ -1,0 +1,22 @@
+#heart-container {
+  width: 100px;
+  overflow: hidden;
+}
+
+#red-heart {
+  z-index: 0;
+  width: 100px;
+  position: absolute;
+}
+
+#empty-heart {
+  z-index: 1;
+  width: 100px;
+  position: relative;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1vh;
+}
