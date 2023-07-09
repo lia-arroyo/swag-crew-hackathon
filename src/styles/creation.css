@@ -1,0 +1,63 @@
+.creation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  background-image: url("../images/backgrounds/creation_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.title {
+  margin-top: 5%;
+  padding: 1%;
+  background-color: #b98849;
+  box-shadow: 5px 7px #533c1e8f;
+  border-radius: 20px;
+  flex: 1;
+}
+
+.textfields {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.avatar {
+  margin-top: -3%;
+  flex: 1.5;
+  display: flex;
+  width: 40%;
+  justify-content: center;
+}
+
+.normalAvatar {
+  width: 100%;
+}
+
+.avatar:hover .hoverAvatar {
+  display: inline-block;
+  width: 100%;
+}
+.avatar:hover .normalAvatar {
+  display: none;
+}
+
+.hoverAvatar {
+  display: none;
+}
+
+#random-btn {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+#select-btn {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
