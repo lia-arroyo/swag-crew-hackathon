@@ -27,7 +27,7 @@
 }
 
 .bg {
-  background: url("../images/zoomeemama_bg.png") repeat-x;
+  background: url("../images/backgrounds/zoomeemama_bg.png") repeat-x;
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
