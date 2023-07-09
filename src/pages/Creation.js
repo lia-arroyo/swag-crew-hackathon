@@ -1,6 +1,7 @@
 import CasinoIcon from "@mui/icons-material/Casino";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router";
 import defaultPet from "../images/pets/1/avatar1.png";
 import petHoverImg from "../images/pets/1/avatar2.png";
 import titleImg from "../images/title/PPB_title.png";
@@ -9,6 +10,7 @@ import { GlobalStateContext } from "../GlobalState";
 import "../styles/creation.css";
 
 const Creation = () => {
+  const navigate = useNavigate();
   const {
     petChosen,
     setPetChosen,
@@ -39,6 +41,10 @@ const Creation = () => {
       setHoverImage(image.default)
     );
   };
+
+  const handleClick = () => {
+    navigate("/map");
+  }
 
   return (
     <div className="creation">
@@ -111,6 +117,7 @@ const Creation = () => {
         color="primary"
         id="select-btn"
         variant="extended"
+        onClick={handleClick}
         sx={{
           backgroundColor: "#b98849",
           color: "#553b30",

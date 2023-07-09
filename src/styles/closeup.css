@@ -29,11 +29,11 @@ body {
 }
 
 .bg {
-  background: url("../images/zoomeemama_bg.png") repeat-x;
+  background: url("../images/backgrounds/zoomeemama_bg.png") repeat-x;
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
-  background-size: 130vw;
+  background-size: 110vw;
   height: 150vh;
   width: 5076px;
   position: absolute;
@@ -105,9 +105,9 @@ body {
 }
 
 .pet-walking {
-  margin-top: 19vh;
-  height: 45vh;
+  height: 50vh;
   width: auto;
+  z-index: 10;
 }
 
 .arrow {
