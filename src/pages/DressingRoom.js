@@ -21,7 +21,7 @@ const DressingRoom = () => {
 
   return (
     <div className="dressing-room">
-      <h1>Dressing Room</h1>
+      <h1 className="dressing-room-title">Dressing Room</h1>
       <div className="accessory-buttons">
         <button className="acc-button" onClick={() => setAccessory(1)}>
           <img src={acc1} alt="Accessory 1" className="acc-button-img" />
