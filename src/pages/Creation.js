@@ -1,13 +1,18 @@
 import CasinoIcon from "@mui/icons-material/Casino";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import defaultPet from "../images/pets/1/avatar1.png";
 import petHoverImg from "../images/pets/1/avatar2.png";
+import titleImg from "../images/title/PPB_title.png";
 import { Fab, TextField } from "@mui/material";
+import { GlobalStateContext } from "../GlobalState";
 import "../styles/creation.css";
 
 const Creation = () => {
-  const [pet, setPet] = useState(1);
+  const {
+    petChosen,
+    setPetChosen,
+  } = useContext(GlobalStateContext);
   const [petAvatar, setPetAvatar] = useState(defaultPet);
   const [hoverImage, setHoverImage] = useState(petHoverImg);
 
@@ -18,11 +23,11 @@ const Creation = () => {
 
   const getNewPet = () => {
     let newPet = getRandomNum();
-    while (newPet === pet) {
+    while (newPet === petChosen) {
       newPet = getRandomNum();
     }
 
-    setPet(newPet);
+    setPetChosen(newPet);
     import(`../images/pets/${newPet}/avatar1.png`).then((image) =>
       setPetAvatar(image.default)
     );
@@ -33,35 +38,38 @@ const Creation = () => {
 
   return (
     <div className="creation">
-      <h1 className="title">SELECT YOUR PET</h1>
+      <img alt="Pet, Path & Beyond" class="titleImg" src={titleImg}/>
+      <div className="title">
+          <h3>SELECT YOUR PET</h3>
+      </div>
       <div className="textfields">
         <TextField
           id="user-name"
           label="Your Name"
           variant="filled"
-          color="warning"
+          color="success"
           sx={{
             backgroundColor: "#b98849",
-            color: "black",
-            borderRadius: "5px",
+            color: "#553b30",
+            borderRadius: "5px 5px 0 0",
             boxShadow: "5px 5px #533c1e8f",
             "& label.Mui-focused": {
-              color: "black",
+              color: "#553b30",
             },
           }}
         />
         <TextField
           id="pet-name"
-          color="warning"
+          color="success"
           label="Your Pet's Name"
           variant="filled"
           sx={{
             backgroundColor: "#b98849",
-            color: "black",
-            borderRadius: "5px",
+            color: "#553b30",
+            borderRadius: "5px 5px 0 0",
             boxShadow: "5px 5px #533c1e8f",
             "& label.Mui-focused": {
-              color: "black",
+              color: "#553b30",
             },
           }}
         />
@@ -81,9 +89,9 @@ const Creation = () => {
         variant="extended"
         sx={{
           backgroundColor: "#b98849",
-          color: "black",
+          color: "#553b30",
           "&:hover": {
-            backgroundColor: "white",
+            backgroundColor: "#d6be5e",
           },
           boxShadow: "5px 5px #533c1e8f",
         }}
@@ -97,9 +105,9 @@ const Creation = () => {
         variant="extended"
         sx={{
           backgroundColor: "#b98849",
-          color: "black",
+          color: "#553b30",
           "&:hover": {
-            backgroundColor: "white",
+            backgroundColor: "#d6be5e",
           },
           boxShadow: "5px 5px #533c1e8f",
         }}
