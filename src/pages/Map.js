@@ -1,14 +1,36 @@
+import { useNavigate } from "react-router";
+import MapButton from "../components/MapButton";
 import FindDistance from "../Components/Distance-Modal";
-import React, { useState } from "react";
+import "../styles/Map.css"
 
 const Map = () => {
-  return (
-    <div>
-      <h1>Map</h1>
+    const navigate = useNavigate();
 
-      <FindDistance></FindDistance>
-    </div>
-  );
+    const handleClick = () => {
+        navigate("/closeup");
+    }
+
+    return (
+        <div id="background">
+           <FindDistance></FindDistance>
+            <div id="landmark1">
+                <MapButton />
+            </div>
+            <div id="landmark2">
+                <MapButton />
+            </div>
+            <div id="landmark3">
+                <MapButton />
+            </div>
+            <div id="landmark4">
+                <MapButton />
+            </div>
+            <div id="landmark5">
+                <MapButton />
+            </div>
+            <button id="character" onClick={handleClick}></button>
+        </div>
+    );
 };
 
 export default Map;

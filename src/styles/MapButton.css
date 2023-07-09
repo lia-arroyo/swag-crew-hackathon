@@ -1,0 +1,41 @@
+#checkpointButton {
+    transform: scale(4);
+    color: #ffac2c;
+    filter: drop-shadow(0px 0px 1px #000000);
+}
+
+.people-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.react-slideshow-wrapper {
+    background-color: #b98849;
+}
+
+.slide-container {
+    height: 270px;
+}
+
+#slideHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.visit-landmark-button {
+    max-height: 40px;
+    background-color: #FFFFFF !important;
+    color:#000000 !important;
+}
+
+.slide-container h1 {
+    display: inline-block;
+    padding: 0 25px 0 25px;
+}
+
+.slide-container section {
+    text-align: justify;
+    padding: 0 25px 25px 25px;
+}
