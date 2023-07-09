@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 * {
   border: 0;
   margin: 0;
   overflow: hidden;
+  color: #553b30;
+  font-family: "Press Start 2P", cursive;
 }
 
 .button-container {
@@ -24,6 +28,9 @@
 
 .bg {
   background: url("../images/zoomeemama_bg.png") repeat-x;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
   background-size: 130vw;
   height: 150vh;
   width: 5076px;
@@ -44,7 +51,7 @@
 }
 
 .left,
-.right {
+.section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +65,7 @@
   background-color: #b98849;
   border-radius: 50px;
   margin: 3vh;
-  padding: 1vh;
+  padding: 1vh 2vw;
   box-shadow: 5px 7px #533c1e8f;
 }
 
@@ -69,19 +76,21 @@
   margin-right: 0.5vw;
 }
 
-.name-container h3 {
-  font-size: 4vh;
-}
-
 .status-bar p {
-  font-size: 2.5vh;
+  font-size: 2vh;
 }
 
 .right p {
   margin: 0 1vh;
 }
+
+.name-container h3 {
+  font-size: 3vh;
+}
+
 .name-container p {
-  font-size: 2vh;
+  margin-top: 1vh;
+  font-size: 1.2vh;
   font-style: italic;
 }
 
@@ -94,7 +103,32 @@
 }
 
 .pet-walking {
-  margin-top: 15vh;
+  margin-top: 19vh;
   height: 45vh;
   width: auto;
+}
+
+.arrow {
+  background-image: url("../images/arrow-sign.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  padding: 4vh 1vw;
+  margin-right: 4vw;
+  -webkit-filter: drop-shadow(5px 5px 5px #533c1e8f);
+  filter: drop-shadow(5px 5px 5px #533c1e8f);
+}
+
+.arrow p {
+  font-size: 15px;
+  line-height: 2vh;
+  text-align: left;
+  padding-left: 1.5vw;
+}
+
+.middle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
