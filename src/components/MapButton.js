@@ -6,7 +6,7 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import "../styles/MapButton.css";
 
-export default function MapButton() {
+export default function MapButton({ slides }) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const popoverOpen = Boolean(anchorEl);
     const id = popoverOpen ? 'simple-popover' : undefined;
@@ -23,21 +23,6 @@ export default function MapButton() {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
-    const slides = [
-        {
-            heading: "Location Name",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu ullamcorper mauris. Etiam tincidunt porttitor est, vitae mattis justo mollis sit amet. Morbi maximus laoreet ornare. Aliquam consectetur ultrices dictum. Cras ornare mattis purus, ut luctus mi suscipit ac."
-        },
-        {
-            heading: "People",
-            content: <ul className="people-list">
-                        <li>Person 1</li>
-                        <li>Person 2</li>
-                        <li>Person 3</li>
-                    </ul>
-        }
-    ];
 
     return(
         <div>

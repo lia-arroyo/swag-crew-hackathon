@@ -4,8 +4,8 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import NavButton from "../components/NavButton";
 import HeartMeter from "../components/HeartMeter";
 import "../styles/closeup.css";
-import pet from "../images/tan_pet0.png";
-import petWalking from "../images/tan_pet_walking.gif";
+import pet from "../images/pets/1/avatar2.png";
+import petWalking from "../images/blue_pet_walking.gif";
 
 const Closeup = ({ distanceInKm }) => {
   // dist = distanceInKm > 10 ? dist = 10 : dist = distanceInKm
@@ -15,8 +15,8 @@ const Closeup = ({ distanceInKm }) => {
     <div>
       <div className="vert-container">
         <div className="button-container">
-          <NavButton icon={<MapOutlinedIcon fontSize="large" />}></NavButton>
-          <NavButton icon={<CheckroomIcon fontSize="large" />}></NavButton>
+          <NavButton icon={<MapOutlinedIcon fontSize="large" />} page="map"></NavButton>
+          <NavButton icon={<CheckroomIcon fontSize="large" />} page="dressing-room"></NavButton>
         </div>
 
         <div className="middle-container">
