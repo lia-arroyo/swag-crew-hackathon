@@ -7,11 +7,14 @@ import petTwo from "../images/pets/4/avatar2.png";
 import petThree from "../images/pets/5/avatar2.png";
 import petFour from "../images/pets/6/avatar2.png";
 import HeartMeter from "../components/HeartMeter";
+import { GlobalStateContext } from "../GlobalState";
+import { useContext } from "react";
 
 const Landmark = (distanceInKm) => {
   // dist = distanceInKm > 10 ? dist = 10 : dist = distanceInKm
   // dist = distanceInKm < 0 ? dist = 0 : dist = distanceInKm
   const dist = 10;
+  const { playerName, petName } = useContext(GlobalStateContext);
   return (
     <div>
       <div className="vertical-container">
@@ -30,8 +33,8 @@ const Landmark = (distanceInKm) => {
           <div className="left">
             <img src={petOne} alt="pet" className="pet-icon"></img>
             <div className="name-container">
-              <h3>FLUFFY</h3>
-              <p>Lia's Path Pet</p>
+              <h3>{petName}</h3>
+              <p>{playerName}'s Path Pet</p>
             </div>
           </div>
 
