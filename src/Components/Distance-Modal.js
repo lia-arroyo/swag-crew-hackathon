@@ -71,7 +71,7 @@ const FindDistance = () => {
 
   return (
     <>
-      <Button onClick={openModal}>Add a new Journey</Button>
+      <Button onClick={openModal} variant="contained">Add a new Journey</Button>
       {isOpen && (
         <div
           className="modal"
