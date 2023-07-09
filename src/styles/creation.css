@@ -36,7 +36,7 @@
 
 .textfields {
   display: flex;
-  width: 50%;
+  width: 60%;
   justify-content: space-evenly;
 }
 
@@ -70,14 +70,26 @@
   display: none;
 }
 
+#user-name {
+  font-family: "Press Start 2P", cursive;
+  color: #553b30;
+}
+
+#pet-name {
+  font-family: "Press Start 2P", cursive;
+  color: #553b30;
+}
+
 #random-btn {
   position: absolute;
   bottom: 10%;
   left: 5%;
+  font-family: "Press Start 2P", cursive;
 }
 
 #select-btn {
   position: absolute;
   bottom: 10%;
   right: 5%;
+  font-family: "Press Start 2P", cursive;
 }
