@@ -33,8 +33,29 @@ const Creation = () => {
 
   return (
     <div className="creation">
-      <h1>SELECT YOUR PET</h1>
-      <TextField id="pet-name" label="Name your pet" variant="outlined" />
+      <h1 className="title">SELECT YOUR PET</h1>
+      <div className="textfields">
+        <TextField
+          id="user-name"
+          label="Your Name"
+          variant="filled"
+          sx={{
+            backgroundColor: "#b98849",
+            color: "black",
+            borderRadius: "5px",
+          }}
+        />
+        <TextField
+          id="pet-name"
+          label="Your Pet's Name"
+          variant="filled"
+          sx={{
+            backgroundColor: "#b98849",
+            color: "black",
+            borderRadius: "5px",
+          }}
+        />
+      </div>
       <div className="avatar">
         <img alt="Pet avatar" className="normalAvatar" src={petAvatar} />
         <img
@@ -48,11 +69,29 @@ const Creation = () => {
         id="random-btn"
         onClick={getNewPet}
         variant="extended"
+        sx={{
+          backgroundColor: "#b98849",
+          color: "black",
+          "&:hover": {
+            backgroundColor: "white",
+          },
+        }}
       >
         <CasinoIcon />
         Randomise
       </Fab>
-      <Fab color="primary" id="select-btn" variant="extended">
+      <Fab
+        color="primary"
+        id="select-btn"
+        variant="extended"
+        sx={{
+          backgroundColor: "#b98849",
+          color: "black",
+          "&:hover": {
+            backgroundColor: "white",
+          },
+        }}
+      >
         Select
         <ArrowForwardIosIcon />
       </Fab>
