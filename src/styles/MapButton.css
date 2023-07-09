@@ -9,11 +9,28 @@
     padding: 0;
 }
 
+.react-slideshow-wrapper {
+    background-color: #b98849;
+}
+
 .slide-container {
-    height: 200px;
+    height: 250px;
+}
+
+#slideHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.visit-landmark-button {
+    max-height: 40px;
+    background-color: #FFFFFF !important;
+    color:#000000 !important;
 }
 
 .slide-container h1 {
+    display: inline-block;
     padding: 0 25px 0 25px;
 }
 

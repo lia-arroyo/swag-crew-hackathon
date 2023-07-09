@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, IconButton, Popover } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { Button, Container, IconButton, Popover } from "@mui/material";
 import PlaceIcon from '@mui/icons-material/Place';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
@@ -9,14 +10,19 @@ export default function MapButton() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const popoverOpen = Boolean(anchorEl);
     const id = popoverOpen ? 'simple-popover' : undefined;
+    const navigate = useNavigate();
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget)
     };
 
+    const handleVisitClick = () => {
+        navigate("/landmark");
+    };
+
     const handleClose = () => {
         setAnchorEl(null);
-    }
+    };
 
     const slides = [
         {
@@ -49,9 +55,12 @@ export default function MapButton() {
             >
                 <Slide id="slideshow" autoplay={false} transitionDuration={500}>
                     {slides.map((slide, index) => (
-                        <div key={index}>
+                        <div key={index} id="slideDiv">
                             <Container id={"checkpointContainer" + index} className="slide-container" maxWidth="sm">
-                                <h1>{slide.heading}</h1>
+                                <div id="slideHeader">
+                                    <h1>{slide.heading}</h1>
+                                    {index === 0 ? <Button className="visit-landmark-button" variant="contained" onClick={handleVisitClick}>Visit</Button> : null}
+                                </div>
                                 <section>{slide.content}</section>
                             </Container>
                         </div>
