@@ -1,23 +1,31 @@
 import "../styles/dressingroom.css";
-import petAvatar from "../images/pets/6/avatar1.png";
-import petAccessory from "../images/pets/6/accessories/6.png";
+import petAvatarDefault from "../images/pets/1/avatar1.png";
+import petAccessory from "../images/pets/1/accessories/6.png";
 import acc1 from "../images/accessories/1.png";
 import acc2 from "../images/accessories/2.png";
 import acc3 from "../images/accessories/3.png";
 import acc4 from "../images/accessories/4.png";
 import acc5 from "../images/accessories/5.png";
 import acc6 from "../images/accessories/6.png";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+import { GlobalStateContext } from "../GlobalState";
 
 const DressingRoom = () => {
   const [currentAccessory, setCurrentAccessory] = useState(petAccessory);
+  const { petChosen } = useContext(GlobalStateContext);
+  const [petAvatar, setPetAvatar] = useState(petAvatarDefault);
 
   const setAccessory = (accessoryId) => {
-    // TODO: NEED TO CHANGE THE 1 TO THE CURRENT PET!!!!!!!!!!!!!!
-    import(`../images/pets/1/accessories/${accessoryId}.png`).then((image) =>
-      setCurrentAccessory(image.default)
+    import(`../images/pets/${petChosen}/accessories/${accessoryId}.png`).then(
+      (image) => setCurrentAccessory(image.default)
     );
   };
+
+  useEffect(() => {
+    import(`../images/pets/${petChosen}/avatar1.png`).then((image) =>
+      setPetAvatar(image.default)
+    );
+  }, [petChosen]);
 
   return (
     <div className="dressing-room">
