@@ -1,13 +1,17 @@
 import CasinoIcon from "@mui/icons-material/Casino";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import defaultPet from "../images/pets/1/avatar1.png";
 import petHoverImg from "../images/pets/1/avatar2.png";
 import { Fab, TextField } from "@mui/material";
+import { GlobalStateContext } from "../GlobalState";
 import "../styles/creation.css";
 
 const Creation = () => {
-  const [pet, setPet] = useState(1);
+  const {
+    petChosen,
+    setPetChosen,
+  } = useContext(GlobalStateContext);
   const [petAvatar, setPetAvatar] = useState(defaultPet);
   const [hoverImage, setHoverImage] = useState(petHoverImg);
 
@@ -18,11 +22,11 @@ const Creation = () => {
 
   const getNewPet = () => {
     let newPet = getRandomNum();
-    while (newPet === pet) {
+    while (newPet === petChosen) {
       newPet = getRandomNum();
     }
 
-    setPet(newPet);
+    setPetChosen(newPet);
     import(`../images/pets/${newPet}/avatar1.png`).then((image) =>
       setPetAvatar(image.default)
     );
