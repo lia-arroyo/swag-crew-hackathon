@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { createTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -18,6 +18,7 @@ const FindDistance = () => {
   const openModal = () => {
     setIsOpen(true);
   };
+
   const [data, setData] = useState([]);
   const [startLoc, setStartLoc] = useState("");
   const [endLoc, setEndLoc] = useState("");
@@ -72,7 +73,10 @@ const FindDistance = () => {
     <>
       <Button onClick={openModal}>Add a new Journey</Button>
       {isOpen && (
-        <div className="modal">
+        <div
+          className="modal"
+          style={{ zIndex: 10, position: "absolute", top: "50%", left: "50%" }}
+        >
           <Box sx={style}>
             <Button onClick={closeModal}>X</Button>
             <Typography id="modal-modal-title" variant="h6" component="h2">

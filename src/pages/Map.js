@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import MapButton from "../components/MapButton";
-import FindDistance from "src/components/Distance-Modal.js";
+import FindDistance from "../components/Distance-Modal";
 import "../styles/Map.css";
 
 const Map = () => {
