@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#background {
+    height: 100vh;
+    background-image: url("../images/backgrounds/islandv3.png");
+    background-repeat: no-repeat;
+    background-size: 110vw;
+    background-position: -5vh;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+#landmark1 {
+    position: absolute;
+    left: 26vw;
+    top: 46vh;
+}
+
+#landmark2 {
+    position: absolute;
+    left: 45.7vw;
+    top: 72vh;
+}
+
+#landmark3 {
+    position: absolute;
+    left: 49.5vw;
+    top: 12vh;
+}
+
+#landmark4 {
+    position: absolute;
+    left: 67.5vw;
+    top: 44vh;
+}
+
+#landmark5 {
+    position: absolute;
+    left: 75.3vw;
+    top: 3vh;
+}

@@ -51,7 +51,7 @@ export default function MapButton() {
                     vertical: 'top',
                     horizontal: 'right',
                 }}
-                sx={{width: "25%"}}
+                sx={{width: "20%"}}
             >
                 <Slide id="slideshow" autoplay={false} transitionDuration={500}>
                     {slides.map((slide, index) => (
