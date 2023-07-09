@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from "react";
-import Card from "@mui/material/Card";
+
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
+
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 
-function FindDistance() {
+const FindDistance = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
   const [data, setData] = useState([]);
   const [startLoc, setStartLoc] = useState("");
   const [endLoc, setEndLoc] = useState("");
@@ -61,57 +69,76 @@ function FindDistance() {
   };
 
   return (
-    <div>
-      <Box sx={style}>
-        <Typography id="modal-modal-title" variant="h6" component="h2">
-          Starting Location
-        </Typography>
+    <>
+      <Button onClick={openModal}>Open modal</Button>
+      {isOpen && (
+        <div className="modal">
+          <Box sx={style}>
+            <Button onClick={closeModal}>X</Button>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              Starting Location
+            </Typography>
 
-        <br />
-        <br />
+            <br />
 
-        <TextField
-          id="outlined-basic"
-          label="Start Location"
-          variant="outlined"
-          onChange={(event) => {
-            setStartLoc(event.target.value);
-          }}
-          value={startLoc}
-          style={{ width: "20em" }}
-        />
-        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-          Ending Location
-        </Typography>
-        <TextField
-          id="outlined-basic"
-          label="End Location"
-          variant="outlined"
-          onChange={(event) => {
-            setEndLoc(event.target.value);
-          }}
-          value={endLoc}
-          style={{ width: "20em" }}
-        />
-        <br />
-        <br />
+            <TextField
+              id="outlined-basic"
+              label="Start Location"
+              variant="outlined"
+              onChange={(event) => {
+                setStartLoc(event.target.value);
+              }}
+              value={startLoc}
+              style={{ width: "20em" }}
+            />
+            <br />
+            <br />
+            <Typography
+              id="modal-modal-description"
+              variant="h6"
+              component="h2"
+              sx={{ mt: 2 }}
+            >
+              Ending Location
+            </Typography>
 
-        <Button
-          variant="outlined"
-          onClick={() => {
-            handleSearch();
-          }}
-        >
-          Find Distance
-        </Button>
-        <br />
-        <br />
+            <br />
+            <TextField
+              id="outlined-basic"
+              label="End Location"
+              variant="outlined"
+              onChange={(event) => {
+                setEndLoc(event.target.value);
+              }}
+              value={endLoc}
+              style={{ width: "20em" }}
+            />
+            <br />
+            <br />
 
-        <Divider />
-        <ListItemText primary="Distance" />
-        <h1>{(dist.distance.toString() / 1000).toFixed(2)} KM</h1>
-      </Box>
-    </div>
+            <Button
+              variant="outlined"
+              onClick={() => {
+                handleSearch();
+              }}
+            >
+              Find Distance
+            </Button>
+            <br />
+            <br />
+
+            <Divider />
+            <ListItemText primary="Distance" />
+            <h1>
+              {dist.distance !== undefined
+                ? (dist.distance.toString() / 1000).toFixed(2)
+                : "0"}
+              KM
+            </h1>
+          </Box>
+        </div>
+      )}
+    </>
   );
-}
+};
 export default FindDistance;
