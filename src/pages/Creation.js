@@ -39,20 +39,30 @@ const Creation = () => {
           id="user-name"
           label="Your Name"
           variant="filled"
+          color="warning"
           sx={{
             backgroundColor: "#b98849",
             color: "black",
             borderRadius: "5px",
+            boxShadow: "5px 5px #533c1e8f",
+            "& label.Mui-focused": {
+              color: "black",
+            },
           }}
         />
         <TextField
           id="pet-name"
+          color="warning"
           label="Your Pet's Name"
           variant="filled"
           sx={{
             backgroundColor: "#b98849",
             color: "black",
             borderRadius: "5px",
+            boxShadow: "5px 5px #533c1e8f",
+            "& label.Mui-focused": {
+              color: "black",
+            },
           }}
         />
       </div>
@@ -75,6 +85,7 @@ const Creation = () => {
           "&:hover": {
             backgroundColor: "white",
           },
+          boxShadow: "5px 5px #533c1e8f",
         }}
       >
         <CasinoIcon />
@@ -90,6 +101,7 @@ const Creation = () => {
           "&:hover": {
             backgroundColor: "white",
           },
+          boxShadow: "5px 5px #533c1e8f",
         }}
       >
         Select
