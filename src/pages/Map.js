@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router";
 import MapButton from "../components/MapButton";
-import FindDistance from "../components/Distance-Modal";
 import "../styles/Map.css";
 
 const Map = () => {
@@ -94,7 +93,6 @@ const Map = () => {
 
   return (
     <div id="background">
-      <FindDistance></FindDistance>
       <div id="landmark1">
         <MapButton slides={slides1} />
       </div>
