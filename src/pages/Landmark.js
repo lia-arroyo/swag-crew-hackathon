@@ -14,9 +14,9 @@ const Landmark = (distanceInKm) => {
   const dist = 10;
   return (
     <div>
-      <div className="vert-container">
+      <div className="vertical-container">
         <div className="btn-container">
-          <NavButton icon={<MapOutlinedIcon fontSize="large" />}></NavButton>
+          <NavButton icon={<MapOutlinedIcon fontSize="large" />} page="map"></NavButton>
           <p>LANDMARK: Fountain </p>
         </div>
 
