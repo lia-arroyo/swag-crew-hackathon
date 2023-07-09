@@ -70,7 +70,7 @@ const FindDistance = () => {
 
   return (
     <>
-      <Button onClick={openModal}>Open modal</Button>
+      <Button onClick={openModal}>Add a new Journey</Button>
       {isOpen && (
         <div className="modal">
           <Box sx={style}>
