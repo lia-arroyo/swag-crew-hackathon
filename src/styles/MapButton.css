@@ -1,6 +1,7 @@
 #checkpointButton {
-    transform: scale(1.8);
-    color: #000000;
+    transform: scale(4);
+    color: #ffac2c;
+    filter: drop-shadow(0px 0px 1px #000000);
 }
 
 .people-list {
@@ -14,7 +15,7 @@
 }
 
 .slide-container {
-    height: 250px;
+    height: 270px;
 }
 
 #slideHeader {

@@ -1,10 +1,32 @@
+import { useNavigate } from "react-router";
 import MapButton from "../components/MapButton";
+import "../styles/Map.css"
 
 const Map = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("/closeup");
+    }
+
     return (
-        <div>
-            <h1>Map</h1>
-            <MapButton />
+        <div id="background">
+            <div id="landmark1">
+                <MapButton />
+            </div>
+            <div id="landmark2">
+                <MapButton />
+            </div>
+            <div id="landmark3">
+                <MapButton />
+            </div>
+            <div id="landmark4">
+                <MapButton />
+            </div>
+            <div id="landmark5">
+                <MapButton />
+            </div>
+            <button id="character" onClick={handleClick}></button>
         </div>
     );
 };
