@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.vertical-container {
+  background-image: url("../images/backgrounds/landmark_bg.png");
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  background-size: 130vw;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  color: #553b30;
+  font-family: "Press Start 2P", cursive;
+}
+
+.mid-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.pet1 {
+  height: 30vh;
+  position: absolute;
+  bottom: 15vh;
+}
+
+.pet2 {
+  height: 30vh;
+  position: absolute;
+  bottom: 15vh;
+  right: 10vh;
+}
+
+.pet3 {
+  height: 15vh;
+  position: absolute;
+  bottom: 25vh;
+  right: 35vh;
+}
+
+.pet4 {
+  height: 20vh;
+  position: absolute;
+  bottom: 25vh;
+  left: 40vh;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn-container p {
+  font-size: 5vh;
+}

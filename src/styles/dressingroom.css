@@ -11,6 +11,12 @@
   overflow: hidden;
 }
 
+#mapButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .dressing-room-title {
   padding: 1%;
   width: 20%;

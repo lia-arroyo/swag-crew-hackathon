@@ -9,6 +9,8 @@ import acc5 from "../images/accessories/5.png";
 import acc6 from "../images/accessories/6.png";
 import { useState, useContext, useEffect } from "react";
 import { GlobalStateContext } from "../GlobalState";
+import NavButton from "../components/NavButton";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const DressingRoom = () => {
   const [currentAccessory, setCurrentAccessory] = useState(petAccessory);
@@ -30,6 +32,9 @@ const DressingRoom = () => {
   return (
     <div className="dressing-room">
       <h1 className="dressing-room-title">Dressing Room</h1>
+      <div id="mapButton">
+        <NavButton icon={<ArrowBackIcon fontSize="large" />} page="closeup"></NavButton>
+      </div>
       <div className="accessory-buttons">
         <button className="acc-button" onClick={() => setAccessory(1)}>
           <img src={acc1} alt="Accessory 1" className="acc-button-img" />

@@ -6,17 +6,26 @@ import HeartMeter from "../components/HeartMeter";
 import "../styles/closeup.css";
 import pet from "../images/pets/1/avatar2.png";
 import petWalking from "../images/blue_pet_walking.gif";
+import { GlobalStateContext } from "../GlobalState";
+import { useContext } from "react";
 
 const Closeup = ({ distanceInKm }) => {
   // dist = distanceInKm > 10 ? dist = 10 : dist = distanceInKm
   // dist = distanceInKm < 0 ? dist = 0 : dist = distanceInKm
+  const { playerName, petName } = useContext(GlobalStateContext);
   const dist = 10;
   return (
     <div>
       <div className="vert-container">
         <div className="button-container">
-          <NavButton icon={<MapOutlinedIcon fontSize="large" />} page="map"></NavButton>
-          <NavButton icon={<CheckroomIcon fontSize="large" />} page="dressing-room"></NavButton>
+          <NavButton
+            icon={<MapOutlinedIcon fontSize="large" />}
+            page="map"
+          ></NavButton>
+          <NavButton
+            icon={<CheckroomIcon fontSize="large" />}
+            page="dressing-room"
+          ></NavButton>
         </div>
 
         <div className="middle-container">
@@ -30,8 +39,8 @@ const Closeup = ({ distanceInKm }) => {
           <div className="left">
             <img src={pet} alt="pet" className="pet-icon"></img>
             <div className="name-container">
-              <h3>FLUFFY</h3>
-              <p>Lia's Path Pet</p>
+              <h3>{petName}</h3>
+              <p>{playerName}'s Path Pet</p>
             </div>
           </div>
 
