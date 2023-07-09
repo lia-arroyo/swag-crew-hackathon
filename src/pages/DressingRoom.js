@@ -1,6 +1,6 @@
 import "../styles/dressingroom.css";
-import petAvatar from "../images/pets/1/avatar1.png";
-import petAccessory from "../images/pets/1/accessories/6.png";
+import petAvatar from "../images/pets/6/avatar1.png";
+import petAccessory from "../images/pets/6/accessories/6.png";
 import acc1 from "../images/accessories/1.png";
 import acc2 from "../images/accessories/2.png";
 import acc3 from "../images/accessories/3.png";
