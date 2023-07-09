@@ -23,7 +23,7 @@ const Creation = () => {
   const [hoverImage, setHoverImage] = useState(petHoverImg);
 
   const getRandomNum = () => {
-    const NUM_OF_PETS = 6;
+    const NUM_OF_PETS = 7;
     return Math.floor(Math.random() * NUM_OF_PETS) + 1;
   };
 
@@ -44,7 +44,7 @@ const Creation = () => {
 
   const handleClick = () => {
     navigate("/map");
-  }
+  };
 
   return (
     <div className="creation">
