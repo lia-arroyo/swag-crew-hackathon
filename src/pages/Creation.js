@@ -12,6 +12,10 @@ const Creation = () => {
   const {
     petChosen,
     setPetChosen,
+    playerName,
+    setPlayerName,
+    petName,
+    setPetName,
   } = useContext(GlobalStateContext);
   const [petAvatar, setPetAvatar] = useState(defaultPet);
   const [hoverImage, setHoverImage] = useState(petHoverImg);
@@ -38,14 +42,16 @@ const Creation = () => {
 
   return (
     <div className="creation">
-      <img alt="Pet, Path & Beyond" class="titleImg" src={titleImg}/>
+      <img alt="Pet, Path & Beyond" class="titleImg" src={titleImg} />
       <div className="title">
-          <h3>SELECT YOUR PET</h3>
+        <h3>SELECT YOUR PET</h3>
       </div>
       <div className="textfields">
         <TextField
           id="user-name"
           label="Your Name"
+          value={playerName}
+          onChange={(e) => setPlayerName(e.target.value)}
           variant="filled"
           color="success"
           sx={{
@@ -63,6 +69,8 @@ const Creation = () => {
           color="success"
           label="Your Pet's Name"
           variant="filled"
+          value={petName}
+          onChange={(e) => setPetName(e.target.value)}
           sx={{
             backgroundColor: "#b98849",
             color: "#553b30",
